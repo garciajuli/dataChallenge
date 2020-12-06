@@ -1,0 +1,72 @@
+ul[role="tree"] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 120%;
+  }
+
+  /*[role="treeitem"].doc::before {
+    background-image: url(../images/images.png);
+    background-size: 100%;
+    display: inline-block ;
+    width: 20px; 
+    height: 20px;
+    content:"";
+    margin-right: 10px;
+  }*/
+  
+  [role="treeitem"][aria-expanded="false"] > ul {
+    display: none;
+  }
+  
+  [role="treeitem"][aria-expanded="true"] > ul {
+    display: block;
+  }
+  
+  [role="treeitem"][aria-expanded="false"] > span::before {
+   
+    background-image: url(../images/closed.png);
+    background-size: 100%;
+    display: inline-block ;
+    width: 20px; 
+    height: 20px;
+    content:"";
+    margin-right: 10px;
+  }
+  
+  [role="treeitem"][aria-expanded="true"] > span::before {
+    background-image: url(../images/open.png);
+    background-size: 100%;
+    display: inline-block ;
+    width: 20px; 
+    height: 20px;
+    content:"";
+    margin-right: 10px;
+  }
+  
+  [role="treeitem"],
+  [role="treeitem"] span {
+    width: 9em;
+    margin: 0;
+    padding: 0.125em;
+    border: 2px transparent solid;
+    display: block;
+  }
+  
+  /* disable default keyboard focus styling for treeitems
+     Keyboard focus is styled with the following CSS */
+  [role="treeitem"]:focus {
+    outline: 0;
+  }
+  
+  [role="treeitem"].focus,
+  [role="treeitem"] span.focus {
+    border-color: black;
+    background-color: #eee;
+  }
+  
+  [role="treeitem"].hover,
+  [role="treeitem"] span:hover {
+    background-color: #ddd;
+  }
+  
